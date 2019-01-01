@@ -1,0 +1,598 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21134,        590]
+NotebookOptionsPosition[     18908,        545]
+NotebookOutlinePosition[     19250,        560]
+CellTagsIndexPosition[     19207,        557]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["SSS1. Mathematica Basics", "Chapter",
+ CellChangeTimes->{{3.7553465412231708`*^9, 
+  3.7553465474556336`*^9}},ExpressionUUID->"e7801f6c-3317-4467-855c-\
+901a1306b847"],
+
+Cell[CellGroupData[{
+
+Cell["Table of Contents", "Section",
+ CellChangeTimes->{{3.7553465510555773`*^9, 
+  3.755346553695749*^9}},ExpressionUUID->"4b915724-a97a-42d3-9868-\
+fc914e21304a"],
+
+Cell[TextData[{
+ "Welcome to your first Mathematica Structured Study Session. Just as you did \
+for Python last semester, we want to give you a space and material to help \
+you gain essential skills and practice them.\nThe notebooks are divided into \
+two sections just as last semester ",
+ StyleBox["Lab",
+  FontWeight->"Bold"],
+ "(A) and ",
+ StyleBox["Exercises",
+  FontWeight->"Bold"],
+ "(B). The lab will introduce new concepts and have examples, that will help \
+you figure out the exercises yourself."
+}], "Text",
+ CellChangeTimes->{{3.755346621518306*^9, 
+  3.755346840278911*^9}},ExpressionUUID->"622db685-37fc-4f5b-a007-\
+e8a09684cbdb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A. Mathematica Lab", "Section",
+ CellChangeTimes->{{3.755346848622404*^9, 
+  3.7553468535829554`*^9}},ExpressionUUID->"ce5ac6a0-98b0-4e6f-bc4e-\
+01646d4799be"],
+
+Cell[CellGroupData[{
+
+Cell["Data Types", "Subsection",
+ CellChangeTimes->{{3.755346859767317*^9, 
+  3.7553468621974964`*^9}},ExpressionUUID->"e8b8fbd5-b24d-404c-96c9-\
+c09bff1c94bd"],
+
+Cell["\<\
+Maybe you remember from python that it is an object-oriented programming \
+language that has various data types/object types, like Strings, Numbers, \
+Lists, etc.\
+\>", "Text",
+ CellChangeTimes->{{3.755346877457199*^9, 3.7553468845488634`*^9}, {
+  3.7553470972147164`*^9, 3.755347126317434*^9}, {3.75534727956538*^9, 
+  3.755347343565468*^9}, {3.755347423180962*^9, 3.755347509317621*^9}, {
+  3.7553476183568735`*^9, 
+  3.755347736356182*^9}},ExpressionUUID->"c8a3cfe5-6435-40c6-a9d7-\
+2f242acd7e9c"],
+
+Cell["\<\
+Mathematica does also have strings, numbers, lists, and many of the same \
+types, but very importantly it is not an object-oriented programming \
+language. If you go down to the source-code you will only find a few \
+\[OpenCurlyDoubleQuote]atomic\[CloseCurlyDoubleQuote](non-reducible) types: \
+numbers(split into a few different types like Integers or Reals), strings, \
+and symbols(which can be a lot of things). All of them are expressions and \
+can be combined into new Expressions to make incredibly intricate data \
+structures, display programs not just as text like in python and some other \
+cool advantages that I hope you will learn to appreciate.\
+\>", "Text",
+ CellChangeTimes->{{3.755347740597705*^9, 3.755347825637086*^9}, {
+  3.7553479235722075`*^9, 3.7553481468351793`*^9}, {3.7553482369079247`*^9, 
+  3.755348262859929*^9}, {3.755348318162095*^9, 
+  3.755348339275704*^9}},ExpressionUUID->"6d00811b-5990-42ab-a4ac-\
+6690f71601f5"],
+
+Cell[CellGroupData[{
+
+Cell["The structure of Mathematica", "Subsubsection",
+ CellChangeTimes->{{3.755348156923688*^9, 
+  3.7553481894750156`*^9}},ExpressionUUID->"86c35b3c-55c6-462b-bd37-\
+4faf12294a4e"],
+
+Cell["\<\
+-Expressions
+\t- Numbers
+\t\t- Integers
+\t\t-Reals
+\t- Strings
+\t-symbols
+\t\t- empty Lists
+\t\t- empty Associations (aka Dictionaries)
+\t\t- Booleans
+\t\t- +, -, /, *,<,>
+\t\t-variables
+\t\t-...
+\t-image
+\t-graphs
+\t-combinations of numbers, strings, symbols,....
+\t-functions\
+\>", "Text",
+ CellChangeTimes->{
+  3.755348101628682*^9, {3.7553481499626875`*^9, 
+   3.7553481527864*^9}},ExpressionUUID->"8516aa66-18f5-449c-8994-\
+fab7f37a63fd"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s look at a small example:\nTo display what a random \
+mathematical expression looks like for Mathematica actually you can use the \
+function ",
+ StyleBox["FullForm",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.755348346634653*^9, 3.755348482354153*^9}, {
+  3.7553485989850197`*^9, 3.7553485989850197`*^9}, {3.7553487524178333`*^9, 
+  3.755348753555396*^9}, {3.7553487967860985`*^9, 3.755348817121231*^9}, {
+  3.7553490777135663`*^9, 
+  3.755349104892136*^9}},ExpressionUUID->"91b878d6-5e65-4b90-8d7b-\
+90b57ac4a1af"],
+
+Cell["FullForm of a mathematical expression:", "CodeText",
+ CellChangeTimes->{{3.7553486664254065`*^9, 
+  3.7553486762096667`*^9}},ExpressionUUID->"8c03607a-c68f-43e3-a648-\
+9b5425193c80"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  RowBox[{
+   SuperscriptBox["x", "2"], "+", 
+   FractionBox[
+    RowBox[{"y", 
+     SqrtBox["2"]}], "4"], "-", 
+   RowBox[{"6", "*", "y"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7553484912475433`*^9, 3.7553485044162617`*^9}, {
+  3.755348551736184*^9, 3.755348632051259*^9}, {3.75534869884099*^9, 
+  3.7553487675611863`*^9}, {3.755348822900468*^9, 3.75534884567815*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"b0905613-b9d1-4ae3-8f7d-17030c6f7959"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Plus", "[", 
+    RowBox[{
+     RowBox[{"Power", "[", 
+      RowBox[{"x", ",", "2"}], "]"}], ",", 
+     RowBox[{"Times", "[", 
+      RowBox[{
+       RowBox[{"-", "6"}], ",", "y"}], "]"}], ",", 
+     RowBox[{"Times", "[", 
+      RowBox[{
+       RowBox[{"Rational", "[", 
+        RowBox[{"1", ",", "2"}], "]"}], ",", 
+       RowBox[{"Power", "[", 
+        RowBox[{"2", ",", 
+         RowBox[{"Rational", "[", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}], ",", "y"}], 
+      "]"}]}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{{3.75534874886971*^9, 3.75534876824175*^9}, 
+   3.755348848338771*^9},
+ CellLabel->
+  "Out[5]//FullForm=",ExpressionUUID->"1d0bb8ac-afab-450a-a550-8b1f0895523c"]
+}, Open  ]],
+
+Cell["\<\
+It is hard to see what\[CloseCurlyQuote]s going on just using times, but \
+luckily there is a function that does the same thing displayed in a nicer way \
+\>", "Text",
+ CellChangeTimes->{{3.755348682305838*^9, 3.7553486907211866`*^9}, {
+  3.755348854497115*^9, 
+  3.755348878634328*^9}},ExpressionUUID->"194d989e-933a-49fe-8682-\
+8d79e55ef5b5"],
+
+Cell["TreeForm of mathematical expression", "CodeText",
+ CellChangeTimes->{{3.755348900297346*^9, 
+  3.755348907465836*^9}},ExpressionUUID->"89498f3e-aced-478c-9d4d-\
+efcba85e3414"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeForm", "[", 
+  RowBox[{
+   SuperscriptBox["x", "2"], "+", 
+   FractionBox[
+    RowBox[{"y", 
+     SqrtBox["2"]}], "4"], "-", 
+   RowBox[{"6", "*", "y"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7553489167458057`*^9, 3.7553489183598213`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"b43a916a-ec34-4729-a3d3-22dac842a762"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{1.879586846976874, 2.050458378520226}, {
+    0.3417430630867044, 1.3669722523468173`}, {0., 0.6834861261734086}, {
+    0.6834861261734088, 0.6834861261734086}, {1.7087153154335217`, 
+    1.3669722523468173`}, {1.3669722523468175`, 0.6834861261734086}, {
+    2.050458378520226, 0.6834861261734086}, {3.4174306308670435`, 
+    1.3669722523468173`}, {2.733944504693635, 0.6834861261734086}, {
+    3.4174306308670435`, 0.6834861261734086}, {3.0756875677803395`, 0.}, {
+    3.759173693953748, 0.}, {4.100916757040452, 0.6834861261734086}}, {
+     {RGBColor[0.55, 0.45, 0.45], 
+      LineBox[{{1, 2}, {1, 5}, {1, 8}, {2, 3}, {2, 4}, {5, 6}, {5, 7}, {8, 
+       9}, {8, 10}, {8, 13}, {10, 11}, {10, 12}}]}, {
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["Plus", "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 1],
+        TagBox[
+         RowBox[{
+           SuperscriptBox["x", "2"], "-", 
+           RowBox[{"6", " ", "y"}], "+", 
+           FractionBox["y", 
+            RowBox[{"2", " ", 
+              SqrtBox["2"]}]]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`x^2 - 6 $CellContext`y + 
+         Rational[1, 2] 2^Rational[-1, 2] $CellContext`y], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["Power", "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 2],
+        TagBox[
+         SuperscriptBox["x", "2"], HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`x^2], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["x",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 3],
+        TagBox["x", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`x], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["2",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 4],
+        TagBox["2", HoldForm]],
+       Annotation[#, 
+        HoldForm[2], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["Times", "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 5],
+        TagBox[
+         RowBox[{
+           RowBox[{"-", "6"}], " ", "y"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[(-6) $CellContext`y], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"-", "6"}],
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 6],
+        TagBox[
+         RowBox[{"-", "6"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[-6], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["y",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 7],
+        TagBox["y", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`y], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["Times", "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 8],
+        TagBox[
+         FractionBox["y", 
+          RowBox[{"2", " ", 
+            SqrtBox["2"]}]], HoldForm]],
+       Annotation[#, 
+        HoldForm[Rational[1, 2] 2^Rational[-1, 2] $CellContext`y], 
+        "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox[
+            FractionBox["1", "2"],
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 9],
+        TagBox[
+         FractionBox["1", "2"], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         Rational[1, 2]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["Power", "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 10],
+        TagBox[
+         FractionBox["1", 
+          SqrtBox["2"]], HoldForm]],
+       Annotation[#, 
+        HoldForm[2^Rational[-1, 2]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["2",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 11],
+        TagBox["2", HoldForm]],
+       Annotation[#, 
+        HoldForm[2], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"-", 
+             FractionBox["1", "2"]}],
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 12],
+        TagBox[
+         RowBox[{"-", 
+           FractionBox["1", "2"]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         Rational[-1, 2]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["y",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           LineColor->GrayLevel[0],
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.05],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 13],
+        TagBox["y", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`y], "Tooltip"]& ]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{1.879586846976874, 2.050458378520226}, {
+     0.3417430630867044, 1.3669722523468173`}, {0., 0.6834861261734086}, {
+     0.6834861261734088, 0.6834861261734086}, {1.7087153154335217`, 
+     1.3669722523468173`}, {1.3669722523468175`, 0.6834861261734086}, {
+     2.050458378520226, 0.6834861261734086}, {3.4174306308670435`, 
+     1.3669722523468173`}, {2.733944504693635, 0.6834861261734086}, {
+     3.4174306308670435`, 0.6834861261734086}, {3.0756875677803395`, 0.}, {
+     3.759173693953748, 0.}, {4.100916757040452, 0.6834861261734086}}]& ],
+  AspectRatio->NCache[2^Rational[-1, 2], 0.7071067811865475],
+  FormatType:>StandardForm,
+  FrameTicks->Automatic,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{3.7553489192166862`*^9},
+ CellLabel->
+  "Out[6]//TreeForm=",ExpressionUUID->"9fdf71b9-7c14-4cc6-b873-a9f8de594db8"]
+}, Open  ]],
+
+Cell[TextData[{
+ "You can see how the expression is internally broken up into the atomic \
+pieces of numbers (like 2 or -6) and symbols (y or x). They are then combined \
+by other symbols like Plus, Power or Times.\nTry typing an expression \
+yourself and look at the ",
+ StyleBox["FullForm",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["TreeForm",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.755348927425437*^9, 3.7553490549916277`*^9}, {
+  3.7553491175138173`*^9, 3.7553491258406973`*^9}, {3.7553492285535946`*^9, 
+  3.7553492431774483`*^9}},ExpressionUUID->"8d898117-8484-4d44-b9f5-\
+ba3631d11a87"],
+
+Cell[TextData[{
+ "If you are more curious about how everything can be an expression, try the ",
+ ButtonBox["\[OpenCurlyDoubleQuote]Everything is an Expression\
+\[CloseCurlyDoubleQuote]-Tutorial",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"tutorial/EverythingIsAnExpression", None}],
+ " in the official documentation"
+}], "Text",
+ CellChangeTimes->{{3.75534925192018*^9, 3.755349404535894*^9}, {
+  3.75534943708533*^9, 
+  3.75534943708533*^9}},ExpressionUUID->"9a1a464e-7ba1-4015-874b-\
+c61dc1dc210c"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{759, 637},
+WindowMargins->{{Automatic, 27}, {Automatic, 26}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 173, 3, 67, "Chapter",ExpressionUUID->"e7801f6c-3317-4467-855c-901a1306b847"],
+Cell[CellGroupData[{
+Cell[778, 29, 164, 3, 67, "Section",ExpressionUUID->"4b915724-a97a-42d3-9868-fc914e21304a"],
+Cell[945, 34, 645, 15, 100, "Text",ExpressionUUID->"622db685-37fc-4f5b-a007-e8a09684cbdb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1627, 54, 165, 3, 67, "Section",ExpressionUUID->"ce5ac6a0-98b0-4e6f-bc4e-01646d4799be"],
+Cell[CellGroupData[{
+Cell[1817, 61, 160, 3, 53, "Subsection",ExpressionUUID->"e8b8fbd5-b24d-404c-96c9-c09bff1c94bd"],
+Cell[1980, 66, 510, 10, 56, "Text",ExpressionUUID->"c8a3cfe5-6435-40c6-a9d7-2f242acd7e9c"],
+Cell[2493, 78, 957, 15, 144, "Text",ExpressionUUID->"6d00811b-5990-42ab-a4ac-6690f71601f5"],
+Cell[CellGroupData[{
+Cell[3475, 97, 181, 3, 44, "Subsubsection",ExpressionUUID->"86c35b3c-55c6-462b-bd37-4faf12294a4e"],
+Cell[3659, 102, 453, 21, 364, "Text",ExpressionUUID->"8516aa66-18f5-449c-8994-fab7f37a63fd"],
+Cell[4115, 125, 568, 12, 78, "Text",ExpressionUUID->"91b878d6-5e65-4b90-8d7b-90b57ac4a1af"],
+Cell[4686, 139, 188, 3, 37, "CodeText",ExpressionUUID->"8c03607a-c68f-43e3-a648-9b5425193c80"],
+Cell[CellGroupData[{
+Cell[4899, 146, 492, 11, 59, "Input",ExpressionUUID->"b0905613-b9d1-4ae3-8f7d-17030c6f7959"],
+Cell[5394, 159, 858, 27, 46, "Output",ExpressionUUID->"1d0bb8ac-afab-450a-a550-8b1f0895523c"]
+}, Open  ]],
+Cell[6267, 189, 354, 7, 56, "Text",ExpressionUUID->"194d989e-933a-49fe-8682-8d79e55ef5b5"],
+Cell[6624, 198, 181, 3, 37, "CodeText",ExpressionUUID->"89498f3e-aced-478c-9d4d-efcba85e3414"],
+Cell[CellGroupData[{
+Cell[6830, 205, 348, 9, 59, "Input",ExpressionUUID->"b43a916a-ec34-4729-a3d3-22dac842a762"],
+Cell[7181, 216, 10541, 292, 288, "Output",ExpressionUUID->"9fdf71b9-7c14-4cc6-b873-a9f8de594db8"]
+}, Open  ]],
+Cell[17737, 511, 617, 15, 78, "Text",ExpressionUUID->"8d898117-8484-4d44-b9f5-ba3631d11a87"],
+Cell[18357, 528, 499, 11, 56, "Text",ExpressionUUID->"9a1a464e-7ba1-4015-874b-c61dc1dc210c"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
