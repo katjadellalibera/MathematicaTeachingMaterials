@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21134,        590]
-NotebookOptionsPosition[     18908,        545]
-NotebookOutlinePosition[     19250,        560]
-CellTagsIndexPosition[     19207,        557]
+NotebookDataLength[     42974,       1118]
+NotebookOptionsPosition[     34437,        976]
+NotebookOutlinePosition[     35148,       1001]
+CellTagsIndexPosition[     35038,        995]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,37 +32,72 @@ Cell["Table of Contents", "Section",
   3.755346553695749*^9}},ExpressionUUID->"4b915724-a97a-42d3-9868-\
 fc914e21304a"],
 
+Cell["\<\
+A. Mathematica Basics
+\tData Types
+\t\tThe structure of Mathematica
+\t\tStrings
+\t\tBooleans
+\t\tNumbers
+\t\tLists
+\t\tVariables
+\tFunctions
+B. Topics
+\t\
+\>", "Text",
+ CellChangeTimes->{{3.755500605450055*^9, 3.755500613921137*^9}, {
+  3.7555007513613367`*^9, 3.755500751363742*^9}, {3.7555058814770594`*^9, 
+  3.7555059476642375`*^9}, {3.7555059958609905`*^9, 
+  3.7555060521167994`*^9}},ExpressionUUID->"372f02ec-8cb6-4b99-b2ba-\
+db9402bed228"],
+
 Cell[TextData[{
  "Welcome to your first Mathematica Structured Study Session. Just as you did \
 for Python last semester, we want to give you a space and material to help \
-you gain essential skills and practice them.\nThe notebooks are divided into \
-two sections just as last semester ",
+you gain essential skills relevant to your courses and practice them.\nThe \
+notebooks are divided into three sections: ",
  StyleBox["Lab",
   FontWeight->"Bold"],
- "(A) and ",
+ "(A), ",
+ StyleBox["Topic",
+  FontWeight->"Bold"],
+ "(B) and ",
  StyleBox["Exercises",
   FontWeight->"Bold"],
- "(B). The lab will introduce new concepts and have examples, that will help \
-you figure out the exercises yourself."
+ "(C). The lab will introduce new Mathematica concepts and have examples, \
+that will help you figure out the exercises yourself. The Topic section will "
 }], "Text",
- CellChangeTimes->{{3.755346621518306*^9, 
-  3.755346840278911*^9}},ExpressionUUID->"622db685-37fc-4f5b-a007-\
-e8a09684cbdb"]
+ CellChangeTimes->{{3.755346621518306*^9, 3.755346840278911*^9}, {
+  3.7555037798095083`*^9, 3.7555037808116045`*^9}, {3.755506027613886*^9, 
+  3.755506124108376*^9}},ExpressionUUID->"622db685-37fc-4f5b-a007-\
+e8a09684cbdb"],
+
+Cell["\<\
+The tutorials will assume you know the python from last semester decently \
+well and make reference to python to help you understand the differences and \
+learn Mathematica more quickly.
+We will try to strike a mix between teaching the basics and \
+\>", "Text",
+ CellChangeTimes->{{3.7555037850417395`*^9, 3.7555038411798086`*^9}, {
+  3.755505960717071*^9, 
+  3.7555059752700195`*^9}},ExpressionUUID->"c0a4ecbf-6757-4dc5-a4b2-\
+d0977f5c58d0"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["A. Mathematica Lab", "Section",
- CellChangeTimes->{{3.755346848622404*^9, 
-  3.7553468535829554`*^9}},ExpressionUUID->"ce5ac6a0-98b0-4e6f-bc4e-\
-01646d4799be"],
+Cell["A. Mathematica Basics", "Section",
+ CellChangeTimes->{{3.755346848622404*^9, 3.7553468535829554`*^9}, {
+  3.755505991229516*^9, 3.755505993365468*^9}},
+ CellTags->
+  "A. Mathematica Lab",ExpressionUUID->"ce5ac6a0-98b0-4e6f-bc4e-01646d4799be"],
 
 Cell[CellGroupData[{
 
 Cell["Data Types", "Subsection",
- CellChangeTimes->{{3.755346859767317*^9, 
-  3.7553468621974964`*^9}},ExpressionUUID->"e8b8fbd5-b24d-404c-96c9-\
-c09bff1c94bd"],
+ CellChangeTimes->{{3.755346859767317*^9, 3.7553468621974964`*^9}},
+ CellTags->
+  "Data Types",ExpressionUUID->"e8b8fbd5-b24d-404c-96c9-c09bff1c94bd"],
 
 Cell["\<\
 Maybe you remember from python that it is an object-oriented programming \
@@ -81,16 +116,18 @@ Mathematica does also have strings, numbers, lists, and many of the same \
 types, but very importantly it is not an object-oriented programming \
 language. If you go down to the source-code you will only find a few \
 \[OpenCurlyDoubleQuote]atomic\[CloseCurlyDoubleQuote](non-reducible) types: \
-numbers(split into a few different types like Integers or Reals), strings, \
-and symbols(which can be a lot of things). All of them are expressions and \
+numbers (split into a few different types like Integers or Reals), strings, \
+and symbols (which can be a lot of things). All of them are expressions and \
 can be combined into new Expressions to make incredibly intricate data \
-structures, display programs not just as text like in python and some other \
-cool advantages that I hope you will learn to appreciate.\
+structures.\
 \>", "Text",
  CellChangeTimes->{{3.755347740597705*^9, 3.755347825637086*^9}, {
   3.7553479235722075`*^9, 3.7553481468351793`*^9}, {3.7553482369079247`*^9, 
-  3.755348262859929*^9}, {3.755348318162095*^9, 
-  3.755348339275704*^9}},ExpressionUUID->"6d00811b-5990-42ab-a4ac-\
+  3.755348262859929*^9}, {3.755348318162095*^9, 3.755348339275704*^9}, {
+  3.7555069134130406`*^9, 3.755506921116689*^9}, {3.755506953253029*^9, 
+  3.7555069754102106`*^9}, {3.7555074645593185`*^9, 3.7555074902364364`*^9}, {
+  3.7555075597211585`*^9, 
+  3.7555075614012117`*^9}},ExpressionUUID->"6d00811b-5990-42ab-a4ac-\
 6690f71601f5"],
 
 Cell[CellGroupData[{
@@ -99,6 +136,13 @@ Cell["The structure of Mathematica", "Subsubsection",
  CellChangeTimes->{{3.755348156923688*^9, 
   3.7553481894750156`*^9}},ExpressionUUID->"86c35b3c-55c6-462b-bd37-\
 4faf12294a4e"],
+
+Cell[TextData[StyleBox["Empty lists and empty associations are not symbols: \
+List[] (not a symbol), List (a symbol)",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.75550702648452*^9, 3.755507069746351*^9}, 
+   3.755507446246689*^9},ExpressionUUID->"23250679-0094-440f-a785-\
+4d493c483629"],
 
 Cell["\<\
 -Expressions
@@ -136,6 +180,14 @@ function ",
   3.7553490777135663`*^9, 
   3.755349104892136*^9}},ExpressionUUID->"91b878d6-5e65-4b90-8d7b-\
 90b57ac4a1af"],
+
+Cell[TextData[StyleBox["maybe\[CloseCurlyDoubleQuote]internally\
+\[CloseCurlyDoubleQuote] instead of \[OpenCurlyDoubleQuote]actually\
+\[CloseCurlyDoubleQuote]",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.7555071022533464`*^9, 
+  3.755507134090212*^9}},ExpressionUUID->"0f1cd5e5-219c-433b-a169-\
+95b125cff590"],
 
 Cell["FullForm of a mathematical expression:", "CodeText",
  CellChangeTimes->{{3.7553486664254065`*^9, 
@@ -187,13 +239,17 @@ Cell[BoxData[
   "Out[5]//FullForm=",ExpressionUUID->"1d0bb8ac-afab-450a-a550-8b1f0895523c"]
 }, Open  ]],
 
-Cell["\<\
-It is hard to see what\[CloseCurlyQuote]s going on just using times, but \
+Cell[TextData[{
+ "It is hard to see what\[CloseCurlyQuote]s going on just using times, but \
 luckily there is a function that does the same thing displayed in a nicer way \
-\>", "Text",
+(",
+ StyleBox["just using times?",
+  FontWeight->"Bold"],
+ ")"
+}], "Text",
  CellChangeTimes->{{3.755348682305838*^9, 3.7553486907211866`*^9}, {
-  3.755348854497115*^9, 
-  3.755348878634328*^9}},ExpressionUUID->"194d989e-933a-49fe-8682-\
+  3.755348854497115*^9, 3.755348878634328*^9}, {3.7555071521231003`*^9, 
+  3.7555071584820733`*^9}},ExpressionUUID->"194d989e-933a-49fe-8682-\
 8d79e55ef5b5"],
 
 Cell["TreeForm of mathematical expression", "CodeText",
@@ -526,21 +582,396 @@ yourself and look at the ",
   3.7553492431774483`*^9}},ExpressionUUID->"8d898117-8484-4d44-b9f5-\
 ba3631d11a87"],
 
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"your", " ", "code", " ", "goes", " ", "here"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.7555035957881145`*^9, 
+  3.7555036016228805`*^9}},ExpressionUUID->"128e640e-ddf5-4a32-aad0-\
+acd072422608"],
+
 Cell[TextData[{
  "If you are more curious about how everything can be an expression, try the ",
  ButtonBox["\[OpenCurlyDoubleQuote]Everything is an Expression\
 \[CloseCurlyDoubleQuote]-Tutorial",
   BaseStyle->"Hyperlink",
   ButtonData->{"tutorial/EverythingIsAnExpression", None}],
- " in the official documentation"
+ " in the official documentation.\nFor practical purposes we will explore \
+some of the expressions in more detail"
 }], "Text",
  CellChangeTimes->{{3.75534925192018*^9, 3.755349404535894*^9}, {
-  3.75534943708533*^9, 
-  3.75534943708533*^9}},ExpressionUUID->"9a1a464e-7ba1-4015-874b-\
-c61dc1dc210c"]
+  3.75534943708533*^9, 3.75534943708533*^9}, {3.755503622907114*^9, 
+  3.7555036492996454`*^9}},ExpressionUUID->"9a1a464e-7ba1-4015-874b-\
+c61dc1dc210c"],
+
+Cell[TextData[StyleBox["that link is very fancy but unfortunately doesn\
+\[CloseCurlyQuote]t work",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.7555071972657166`*^9, 
+  3.7555072089722633`*^9}},ExpressionUUID->"31adcb38-564e-431c-94d4-\
+5b749c11d314"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Strings", "Subsubsection",
+ CellChangeTimes->{{3.7555036521166334`*^9, 3.755503653435411*^9}, 
+   3.755505906157956*^9},ExpressionUUID->"d28d15cf-8a8e-4507-b589-\
+a0ecb3fb9c8d"],
+
+Cell["\<\
+Just as in python, strings are marked with quotes. Mathematica will \
+automatically print everything, unless you follow it with a semicolon.\
+\>", "Text",
+ CellChangeTimes->{{3.755503657835533*^9, 
+  3.7555037102832966`*^9}},ExpressionUUID->"7a637af7-b69f-4596-9eda-\
+877140a705b4"],
+
+Cell["The classic Hello World Program", "CodeText",
+ CellChangeTimes->{{3.755503743725603*^9, 
+  3.755503750163335*^9}},ExpressionUUID->"77639faf-5848-4b7f-826a-\
+457ea74203a3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\"\<Hello World\>\""], "Input",
+ CellChangeTimes->{{3.755503712018787*^9, 3.755503728860309*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"9bfe2a34-00e2-4a87-a805-6e67a0690b16"],
+
+Cell[BoxData["\<\"Hello World\"\>"], "Output",
+ CellChangeTimes->{{3.7555037152765417`*^9, 3.755503737143258*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"afef01fc-80f1-4449-9d16-cca66d1f18b3"]
+}, Open  ]],
+
+Cell["Don\[CloseCurlyQuote]t print the string by putting a semicolon", \
+"CodeText",
+ CellChangeTimes->{{3.7555037567083454`*^9, 3.75550377266811*^9}, 
+   3.7555038591633244`*^9},ExpressionUUID->"6738c6ac-6b60-4be7-95bd-\
+6aae0fa12b12"],
+
+Cell[BoxData[
+ RowBox[{"\"\<Hello World\>\"", ";"}]], "Input",
+ CellChangeTimes->{{3.7555037170166135`*^9, 3.755503733795391*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"d5e8c338-19e6-4831-a4b3-a09138c2ebc8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Booleans", "Subsubsection",
+ CellChangeTimes->{{3.755503954956039*^9, 3.755503961507972*^9}, 
+   3.755505907949154*^9},ExpressionUUID->"e2279a94-1848-479c-9aeb-\
+59ce37734be9"],
+
+Cell["\<\
+Boolean values are True or False values. They can be used as conditions, or \
+returned by functions among many other things.
+An example is many functions ending in Q. These are usually true or false \
+questions.\
+\>", "Text",
+ CellChangeTimes->{{3.755503967249341*^9, 
+  3.755504054948481*^9}},ExpressionUUID->"798310bf-0c0e-45f6-ba18-\
+2433d1c258b4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"EvenQ", "[", "5", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"PrimeQ", "[", "137", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"14", "\[LessEqual]", "12"}], "\[IndentingNewLine]", 
+ RowBox[{"1", "\[NotEqual]", "2"}]}], "Input",
+ CellChangeTimes->{{3.7555040116468463`*^9, 3.755504018574816*^9}, {
+  3.755504059050456*^9, 3.7555041212359123`*^9}, {3.755504213773031*^9, 
+  3.755504256587531*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"50c19719-b056-437c-9d11-6cd8f867cbab"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{
+  3.7555040903082113`*^9, 3.755504121473783*^9, {3.755504241014254*^9, 
+   3.7555042572801957`*^9}},
+ CellLabel->"Out[16]=",ExpressionUUID->"7c25f595-464a-4524-a0d3-2f2bb7583c09"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.7555040903082113`*^9, 3.755504121473783*^9, {3.755504241014254*^9, 
+   3.7555042572883368`*^9}},
+ CellLabel->"Out[17]=",ExpressionUUID->"931dee99-803a-4024-9b2b-4a016cc63850"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{
+  3.7555040903082113`*^9, 3.755504121473783*^9, {3.755504241014254*^9, 
+   3.7555042572929554`*^9}},
+ CellLabel->"Out[18]=",ExpressionUUID->"100a1371-d67d-472f-93e9-8d7de54a3d5c"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.7555040903082113`*^9, 3.755504121473783*^9, {3.755504241014254*^9, 
+   3.7555042572961545`*^9}},
+ CellLabel->"Out[19]=",ExpressionUUID->"f8d46d02-1698-4729-86e9-4b8fc48d96da"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Might be more clear in seperate cells",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.755507253486637*^9, 
+  3.7555072779538507`*^9}},ExpressionUUID->"e31ac479-328a-4039-8afe-\
+7db9de960889"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Numbers", "Subsubsection",
+ CellChangeTimes->{{3.755504616721282*^9, 
+  3.755504617864349*^9}},ExpressionUUID->"1eb9cc51-5202-48f4-8764-\
+c6318699afa1"],
+
+Cell["\<\
+If you use one type of number like a fraction or an integer, Mathematica will \
+try to return the answer in the same format\
+\>", "Text",
+ CellChangeTimes->{{3.7555046263462353`*^9, 3.755504660312224*^9}, {
+  3.7555049288485456`*^9, 
+  3.75550495551019*^9}},ExpressionUUID->"fdf96c62-25ac-46f1-b1b8-\
+05c13b4752b9"],
+
+Cell["A simple multiplication", "CodeText",
+ CellChangeTimes->{{3.755505002535859*^9, 
+  3.755505012417096*^9}},ExpressionUUID->"7e0a6311-16e7-4e47-ad52-\
+d3ef96264ba5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "5"], "*", "2", "x"}]], "Input",
+ CellChangeTimes->{{3.7555049580194864`*^9, 3.755504985681574*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"84f2e198-6c00-42be-aac5-41fec410f696"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", "x"}], "5"]], "Output",
+ CellChangeTimes->{{3.7555049666228228`*^9, 3.7555049864404917`*^9}},
+ CellLabel->"Out[30]=",ExpressionUUID->"03cc4de6-1d86-4887-b30f-b4b2670b4497"]
+}, Open  ]],
+
+Cell["The same multiplication as a fraction", "CodeText",
+ CellChangeTimes->{{3.755505040407118*^9, 
+  3.75550505153573*^9}},ExpressionUUID->"5b7cfe19-1b67-4330-9721-\
+c318d0b86b56"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"0.2", "*", "2", "x"}]], "Input",
+ CellChangeTimes->{{3.7555049790389357`*^9, 3.7555049913214645`*^9}, {
+  3.755505024594038*^9, 3.755505030280367*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"50aef48b-2645-49e9-97f8-402b35ed462f"],
+
+Cell[BoxData[
+ RowBox[{"0.4`", " ", "x"}]], "Output",
+ CellChangeTimes->{
+  3.755504991960253*^9, {3.755505025824973*^9, 3.755505031438403*^9}},
+ CellLabel->"Out[33]=",ExpressionUUID->"ae70aa8e-c9fb-45dc-86de-2aed99b06b6a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Lists", "Subsubsection",
+ CellChangeTimes->{{3.7555054087183533`*^9, 
+  3.7555054141424685`*^9}},ExpressionUUID->"8bb5c32c-5160-4b5b-a6c7-\
+0d8d91d752f3"],
+
+Cell["\<\
+Mathematica lists can contain any type you want mixed together and can have \
+as many dimensions as you want. They are described by curly brackets {} and \
+can be indexed by double square brackets [[]]. It is indexed from 1, not 0 \
+like python\
+\>", "Text",
+ CellChangeTimes->{{3.755505416590864*^9, 3.755505500063236*^9}, {
+  3.7555056208483677`*^9, 
+  3.7555056492708673`*^9}},ExpressionUUID->"39e4a63f-b5f1-4ed7-9c8b-\
+3fc86fdceeff"],
+
+Cell["Create a list of various types", "CodeText",
+ CellChangeTimes->{{3.755505731133619*^9, 
+  3.7555057425735884`*^9}},ExpressionUUID->"dd51a21e-3c9d-4f79-8acb-\
+1a47589b5c8d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"aList", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "1", ",", "5", ",", "\"\<Hello\>\"", ",", "a", ",", "b"}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7555055037427187`*^9, 3.755505532502097*^9}, {
+  3.7555056057111874`*^9, 3.755505607429862*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"c4c692c3-e093-45ae-a969-031d6071e797"],
+
+Cell["Access the first element in the list", "CodeText",
+ CellChangeTimes->{{3.7555057161260567`*^9, 
+  3.7555057231494884`*^9}},ExpressionUUID->"c6086306-f399-4f24-84a9-\
+b8e0d37cbb52"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"aList", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7555056095836143`*^9, 3.7555056330137944`*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"b72f4e46-f459-459b-bb8c-6906625cc80a"],
+
+Cell[BoxData["4"], "Output",
+ CellChangeTimes->{{3.7555056136227517`*^9, 3.755505633525325*^9}},
+ CellLabel->"Out[40]=",ExpressionUUID->"4cecc80b-f9c4-46e8-a52b-7270e5622b30"]
+}, Open  ]],
+
+Cell["You can give a list of indexes you want to access.", "CodeText",
+ CellChangeTimes->{{3.755505684149744*^9, 
+  3.755505703661689*^9}},ExpressionUUID->"b13fe367-d027-47d3-be08-\
+b3b654a341d3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"aList", "[", 
+  RowBox[{"[", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "4"}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.755505654619043*^9, 3.755505675164509*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"766af25d-c754-43a1-b00f-834488962646"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "\<\"Hello\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.755505667108449*^9, 3.755505675627471*^9}},
+ CellLabel->"Out[42]=",ExpressionUUID->"8680dd28-e3cf-4a3e-8bf1-93ee09b20490"]
+}, Open  ]],
+
+Cell["\<\
+Notice that you did not assign a value to the variables a and b, but \
+Mathematica did not throw an error. It will simply wait until you assign them \
+a value and treat them as unassigned variables until then. This is incredibly \
+useful when doing math.\
+\>", "Text",
+ CellChangeTimes->{{3.755505535895152*^9, 
+  3.755505597614396*^9}},ExpressionUUID->"02021198-9c57-4387-adf3-\
+23b7f6a9637c"],
+
+Cell[TextData[StyleBox["Maybe mention ranges too (1;;2, etc like in python?)",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.7555073542496634`*^9, 
+  3.7555073684179907`*^9}},ExpressionUUID->"ead3dd64-7745-49a1-bdf0-\
+901c3229c6a1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Variables", "Subsubsection",
+ CellChangeTimes->{{3.755504302930216*^9, 
+  3.7555043053532248`*^9}},ExpressionUUID->"13e27dd2-8682-4e9c-944a-\
+e990e423b6b1"],
+
+Cell["\<\
+Just as in python, you will use variables in your program. The convention for \
+naming variables is capitalizing each new word without underscores or spaces, \
+with the first word not capitalized (that is reserved for built-in functions)\
+\>", "Text",
+ CellChangeTimes->{{3.7555043113131094`*^9, 
+  3.755504385272634*^9}},ExpressionUUID->"5aea4f51-801e-417c-b485-\
+37428fccd3ff"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aNumber", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"aString", "=", "\"\<The number is:\>\""}], ";"}]}], "Input",
+ CellChangeTimes->{{3.755504387992629*^9, 3.755504452269374*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"9879f657-ccdd-4f96-9704-9a016698fc89"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{"aString", "\[IndentingNewLine]", "aNumber"}], "Input",
+ CellChangeTimes->{{3.755504454830675*^9, 3.755504496739849*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"ea399e5c-c032-4a56-b72a-0bf2cdb9863d"],
+
+Cell[BoxData["\<\"The number is:\"\>"], "Output",
+ CellChangeTimes->{{3.755504492860106*^9, 3.7555044972343426`*^9}},
+ CellLabel->"Out[27]=",ExpressionUUID->"8bc2c664-bff6-45bb-a745-c8f513e42662"],
+
+Cell[BoxData["100"], "Output",
+ CellChangeTimes->{{3.755504492860106*^9, 3.7555044972427053`*^9}},
+ CellLabel->"Out[28]=",ExpressionUUID->"721220ca-d7dd-4f33-9def-de815e8d8063"]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Functions", "Subsection",
+ CellChangeTimes->{{3.755504546452712*^9, 
+  3.755504547768551*^9}},ExpressionUUID->"08245f26-a746-4370-9a77-\
+75ccbc914d4c"],
+
+Cell["Mathematica\[CloseCurlyQuote]s syntax for functions is as follows:", \
+"Text",
+ CellChangeTimes->{{3.755505091138098*^9, 
+  3.7555051023356533`*^9}},ExpressionUUID->"46b2c306-7043-4e2d-a063-\
+3fcda70dd577"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"function", "[", 
+   RowBox[{"input_", ",", "moreInputs_"}], "]"}], ":=", 
+  RowBox[{"operation", "[", 
+   RowBox[{"input", ",", "moreInputs"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.75550510540774*^9, 3.755505199663931*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"9e0b7f5e-7c01-46f8-b938-fe4f86c69375"],
+
+Cell["Let\[CloseCurlyQuote]s look at an example", "Text",
+ CellChangeTimes->{{3.7555052736867375`*^9, 
+  3.755505293135721*^9}},ExpressionUUID->"3bd81ea7-018b-42f1-b42f-\
+e814bd3afb8b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sumOfSquares", "[", 
+   RowBox[{"int1_", ",", "int2_"}], "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["int1", "2"], "+", 
+   SuperscriptBox["int2", "2"]}]}]], "Input",
+ CellChangeTimes->{{3.7555052973369827`*^9, 3.755505321562546*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"5290c58f-aecf-4d42-b350-a7e8bfa26714"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sumOfSquares", "[", 
+  RowBox[{"4", ",", "5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.755505326307841*^9, 3.7555053336982555`*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"7d40a35e-370c-4da4-9459-4508a6d03d88"],
+
+Cell[BoxData["41"], "Output",
+ CellChangeTimes->{3.7555053350190973`*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"0a6f5909-0b2d-46e2-85df-ca464f13b0a1"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Did you already show how to write the superscript? it \
+might be a bit confusibng if not",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.755507390602531*^9, 
+  3.7555074079054484`*^9}},ExpressionUUID->"35e40cc9-37d4-4c97-9ae5-\
+0a596670bea3"],
+
+Cell["For many things you will be using built-in functions. ", "Text",
+ CellChangeTimes->{{3.7555058527614717`*^9, 
+  3.7555058719972587`*^9}},ExpressionUUID->"90cc6d23-89aa-4b0f-b834-\
+c40f4b2c6fdd"]
 }, Open  ]]
+}, Open  ]],
+
+Cell["B. Exercises", "Section",
+ CellChangeTimes->{{3.755505064020681*^9, 
+  3.7555050672951803`*^9}},ExpressionUUID->"443783d5-4afa-43b4-a059-\
+aba1400c647a"]
 }, Open  ]]
 },
 WindowSize->{759, 637},
@@ -552,10 +983,20 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "A. Mathematica Lab"->{
+  Cell[2735, 88, 248, 4, 67, "Section",ExpressionUUID->"ce5ac6a0-98b0-4e6f-bc4e-01646d4799be",
+   CellTags->"A. Mathematica Lab"]},
+ "Data Types"->{
+  Cell[3008, 96, 183, 3, 53, "Subsection",ExpressionUUID->"e8b8fbd5-b24d-404c-96c9-c09bff1c94bd",
+   CellTags->"Data Types"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"A. Mathematica Lab", 34739, 986},
+ {"Data Types", 34888, 989}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
@@ -563,34 +1004,121 @@ Cell[CellGroupData[{
 Cell[580, 22, 173, 3, 67, "Chapter",ExpressionUUID->"e7801f6c-3317-4467-855c-901a1306b847"],
 Cell[CellGroupData[{
 Cell[778, 29, 164, 3, 67, "Section",ExpressionUUID->"4b915724-a97a-42d3-9868-fc914e21304a"],
-Cell[945, 34, 645, 15, 100, "Text",ExpressionUUID->"622db685-37fc-4f5b-a007-e8a09684cbdb"]
+Cell[945, 34, 457, 17, 254, "Text",ExpressionUUID->"372f02ec-8cb6-4b99-b2ba-db9402bed228"],
+Cell[1405, 53, 838, 19, 144, "Text",ExpressionUUID->"622db685-37fc-4f5b-a007-e8a09684cbdb"],
+Cell[2246, 74, 452, 9, 78, "Text",ExpressionUUID->"c0a4ecbf-6757-4dc5-a4b2-d0977f5c58d0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1627, 54, 165, 3, 67, "Section",ExpressionUUID->"ce5ac6a0-98b0-4e6f-bc4e-01646d4799be"],
+Cell[2735, 88, 248, 4, 67, "Section",ExpressionUUID->"ce5ac6a0-98b0-4e6f-bc4e-01646d4799be",
+ CellTags->"A. Mathematica Lab"],
 Cell[CellGroupData[{
-Cell[1817, 61, 160, 3, 53, "Subsection",ExpressionUUID->"e8b8fbd5-b24d-404c-96c9-c09bff1c94bd"],
-Cell[1980, 66, 510, 10, 56, "Text",ExpressionUUID->"c8a3cfe5-6435-40c6-a9d7-2f242acd7e9c"],
-Cell[2493, 78, 957, 15, 144, "Text",ExpressionUUID->"6d00811b-5990-42ab-a4ac-6690f71601f5"],
+Cell[3008, 96, 183, 3, 53, "Subsection",ExpressionUUID->"e8b8fbd5-b24d-404c-96c9-c09bff1c94bd",
+ CellTags->"Data Types"],
+Cell[3194, 101, 510, 10, 56, "Text",ExpressionUUID->"c8a3cfe5-6435-40c6-a9d7-2f242acd7e9c"],
+Cell[3707, 113, 1040, 17, 122, "Text",ExpressionUUID->"6d00811b-5990-42ab-a4ac-6690f71601f5"],
 Cell[CellGroupData[{
-Cell[3475, 97, 181, 3, 44, "Subsubsection",ExpressionUUID->"86c35b3c-55c6-462b-bd37-4faf12294a4e"],
-Cell[3659, 102, 453, 21, 364, "Text",ExpressionUUID->"8516aa66-18f5-449c-8994-fab7f37a63fd"],
-Cell[4115, 125, 568, 12, 78, "Text",ExpressionUUID->"91b878d6-5e65-4b90-8d7b-90b57ac4a1af"],
-Cell[4686, 139, 188, 3, 37, "CodeText",ExpressionUUID->"8c03607a-c68f-43e3-a648-9b5425193c80"],
+Cell[4772, 134, 181, 3, 44, "Subsubsection",ExpressionUUID->"86c35b3c-55c6-462b-bd37-4faf12294a4e"],
+Cell[4956, 139, 297, 5, 34, "Text",ExpressionUUID->"23250679-0094-440f-a785-4d493c483629"],
+Cell[5256, 146, 453, 21, 364, "Text",ExpressionUUID->"8516aa66-18f5-449c-8994-fab7f37a63fd"],
+Cell[5712, 169, 568, 12, 78, "Text",ExpressionUUID->"91b878d6-5e65-4b90-8d7b-90b57ac4a1af"],
+Cell[6283, 183, 319, 6, 34, "Text",ExpressionUUID->"0f1cd5e5-219c-433b-a169-95b125cff590"],
+Cell[6605, 191, 188, 3, 37, "CodeText",ExpressionUUID->"8c03607a-c68f-43e3-a648-9b5425193c80"],
 Cell[CellGroupData[{
-Cell[4899, 146, 492, 11, 59, "Input",ExpressionUUID->"b0905613-b9d1-4ae3-8f7d-17030c6f7959"],
-Cell[5394, 159, 858, 27, 46, "Output",ExpressionUUID->"1d0bb8ac-afab-450a-a550-8b1f0895523c"]
+Cell[6818, 198, 492, 11, 59, "Input",ExpressionUUID->"b0905613-b9d1-4ae3-8f7d-17030c6f7959"],
+Cell[7313, 211, 858, 27, 46, "Output",ExpressionUUID->"1d0bb8ac-afab-450a-a550-8b1f0895523c"]
 }, Open  ]],
-Cell[6267, 189, 354, 7, 56, "Text",ExpressionUUID->"194d989e-933a-49fe-8682-8d79e55ef5b5"],
-Cell[6624, 198, 181, 3, 37, "CodeText",ExpressionUUID->"89498f3e-aced-478c-9d4d-efcba85e3414"],
+Cell[8186, 241, 474, 11, 56, "Text",ExpressionUUID->"194d989e-933a-49fe-8682-8d79e55ef5b5"],
+Cell[8663, 254, 181, 3, 37, "CodeText",ExpressionUUID->"89498f3e-aced-478c-9d4d-efcba85e3414"],
 Cell[CellGroupData[{
-Cell[6830, 205, 348, 9, 59, "Input",ExpressionUUID->"b43a916a-ec34-4729-a3d3-22dac842a762"],
-Cell[7181, 216, 10541, 292, 288, "Output",ExpressionUUID->"9fdf71b9-7c14-4cc6-b873-a9f8de594db8"]
+Cell[8869, 261, 348, 9, 59, "Input",ExpressionUUID->"b43a916a-ec34-4729-a3d3-22dac842a762"],
+Cell[9220, 272, 10541, 292, 288, "Output",ExpressionUUID->"9fdf71b9-7c14-4cc6-b873-a9f8de594db8"]
 }, Open  ]],
-Cell[17737, 511, 617, 15, 78, "Text",ExpressionUUID->"8d898117-8484-4d44-b9f5-ba3631d11a87"],
-Cell[18357, 528, 499, 11, 56, "Text",ExpressionUUID->"9a1a464e-7ba1-4015-874b-c61dc1dc210c"]
+Cell[19776, 567, 617, 15, 78, "Text",ExpressionUUID->"8d898117-8484-4d44-b9f5-ba3631d11a87"],
+Cell[20396, 584, 236, 5, 28, "Input",ExpressionUUID->"128e640e-ddf5-4a32-aad0-acd072422608"],
+Cell[20635, 591, 629, 12, 78, "Text",ExpressionUUID->"9a1a464e-7ba1-4015-874b-c61dc1dc210c"],
+Cell[21267, 605, 260, 5, 34, "Text",ExpressionUUID->"31adcb38-564e-431c-94d4-5b749c11d314"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21564, 615, 183, 3, 44, "Subsubsection",ExpressionUUID->"d28d15cf-8a8e-4507-b589-a0ecb3fb9c8d"],
+Cell[21750, 620, 292, 6, 56, "Text",ExpressionUUID->"7a637af7-b69f-4596-9eda-877140a705b4"],
+Cell[22045, 628, 177, 3, 37, "CodeText",ExpressionUUID->"77639faf-5848-4b7f-826a-457ea74203a3"],
+Cell[CellGroupData[{
+Cell[22247, 635, 189, 2, 28, "Input",ExpressionUUID->"9bfe2a34-00e2-4a87-a805-6e67a0690b16"],
+Cell[22439, 639, 192, 2, 32, "Output",ExpressionUUID->"afef01fc-80f1-4449-9d16-cca66d1f18b3"]
+}, Open  ]],
+Cell[22646, 644, 236, 4, 37, "CodeText",ExpressionUUID->"6738c6ac-6b60-4be7-95bd-6aae0fa12b12"],
+Cell[22885, 650, 208, 3, 28, "Input",ExpressionUUID->"d5e8c338-19e6-4831-a4b3-a09138c2ebc8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23130, 658, 182, 3, 44, "Subsubsection",ExpressionUUID->"e2279a94-1848-479c-9aeb-59ce37734be9"],
+Cell[23315, 663, 361, 8, 78, "Text",ExpressionUUID->"798310bf-0c0e-45f6-ba18-2433d1c258b4"],
+Cell[CellGroupData[{
+Cell[23701, 675, 492, 8, 86, "Input",ExpressionUUID->"50c19719-b056-437c-9d11-6cd8f867cbab"],
+Cell[24196, 685, 232, 4, 32, "Output",ExpressionUUID->"7c25f595-464a-4524-a0d3-2f2bb7583c09"],
+Cell[24431, 691, 231, 4, 32, "Output",ExpressionUUID->"931dee99-803a-4024-9b2b-4a016cc63850"],
+Cell[24665, 697, 232, 4, 32, "Output",ExpressionUUID->"100a1371-d67d-472f-93e9-8d7de54a3d5c"],
+Cell[24900, 703, 231, 4, 32, "Output",ExpressionUUID->"f8d46d02-1698-4729-86e9-4b8fc48d96da"]
+}, Open  ]],
+Cell[25146, 710, 222, 4, 34, "Text",ExpressionUUID->"e31ac479-328a-4039-8afe-7db9de960889"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25405, 719, 158, 3, 44, "Subsubsection",ExpressionUUID->"1eb9cc51-5202-48f4-8764-c6318699afa1"],
+Cell[25566, 724, 325, 7, 56, "Text",ExpressionUUID->"fdf96c62-25ac-46f1-b1b8-05c13b4752b9"],
+Cell[25894, 733, 169, 3, 37, "CodeText",ExpressionUUID->"7e0a6311-16e7-4e47-ad52-d3ef96264ba5"],
+Cell[CellGroupData[{
+Cell[26088, 740, 222, 4, 51, "Input",ExpressionUUID->"84f2e198-6c00-42be-aac5-41fec410f696"],
+Cell[26313, 746, 220, 4, 55, "Output",ExpressionUUID->"03cc4de6-1d86-4887-b30f-b4b2670b4497"]
+}, Open  ]],
+Cell[26548, 753, 182, 3, 37, "CodeText",ExpressionUUID->"5b7cfe19-1b67-4330-9721-c318d0b86b56"],
+Cell[CellGroupData[{
+Cell[26755, 760, 254, 4, 28, "Input",ExpressionUUID->"50aef48b-2645-49e9-97f8-402b35ed462f"],
+Cell[27012, 766, 223, 4, 32, "Output",ExpressionUUID->"ae70aa8e-c9fb-45dc-86de-2aed99b06b6a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27284, 776, 160, 3, 44, "Subsubsection",ExpressionUUID->"8bb5c32c-5160-4b5b-a6c7-0d8d91d752f3"],
+Cell[27447, 781, 447, 9, 78, "Text",ExpressionUUID->"39e4a63f-b5f1-4ed7-9c8b-3fc86fdceeff"],
+Cell[27897, 792, 178, 3, 37, "CodeText",ExpressionUUID->"dd51a21e-3c9d-4f79-8acb-1a47589b5c8d"],
+Cell[28078, 797, 380, 9, 28, "Input",ExpressionUUID->"c4c692c3-e093-45ae-a969-031d6071e797"],
+Cell[28461, 808, 186, 3, 37, "CodeText",ExpressionUUID->"c6086306-f399-4f24-84a9-b8e0d37cbb52"],
+Cell[CellGroupData[{
+Cell[28672, 815, 230, 4, 28, "Input",ExpressionUUID->"b72f4e46-f459-459b-bb8c-6906625cc80a"],
+Cell[28905, 821, 175, 2, 32, "Output",ExpressionUUID->"4cecc80b-f9c4-46e8-a52b-7270e5622b30"]
+}, Open  ]],
+Cell[29095, 826, 196, 3, 37, "CodeText",ExpressionUUID->"b13fe367-d027-47d3-be08-b3b654a341d3"],
+Cell[CellGroupData[{
+Cell[29316, 833, 275, 6, 28, "Input",ExpressionUUID->"766af25d-c754-43a1-b00f-834488962646"],
+Cell[29594, 841, 230, 4, 32, "Output",ExpressionUUID->"8680dd28-e3cf-4a3e-8bf1-93ee09b20490"]
+}, Open  ]],
+Cell[29839, 848, 404, 8, 78, "Text",ExpressionUUID->"02021198-9c57-4387-adf3-23b7f6a9637c"],
+Cell[30246, 858, 239, 4, 34, "Text",ExpressionUUID->"ead3dd64-7745-49a1-bdf0-901c3229c6a1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30522, 867, 162, 3, 44, "Subsubsection",ExpressionUUID->"13e27dd2-8682-4e9c-944a-e990e423b6b1"],
+Cell[30687, 872, 389, 7, 78, "Text",ExpressionUUID->"5aea4f51-801e-417c-b485-37428fccd3ff"],
+Cell[31079, 881, 317, 6, 48, "Input",ExpressionUUID->"9879f657-ccdd-4f96-9704-9a016698fc89"],
+Cell[CellGroupData[{
+Cell[31421, 891, 214, 2, 48, "Input",ExpressionUUID->"ea399e5c-c032-4a56-b72a-0bf2cdb9863d"],
+Cell[31638, 895, 196, 2, 32, "Output",ExpressionUUID->"8bc2c664-bff6-45bb-a745-c8f513e42662"],
+Cell[31837, 899, 177, 2, 32, "Output",ExpressionUUID->"721220ca-d7dd-4f33-9def-de815e8d8063"]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32075, 908, 157, 3, 53, "Subsection",ExpressionUUID->"08245f26-a746-4370-9a77-75ccbc914d4c"],
+Cell[32235, 913, 212, 4, 34, "Text",ExpressionUUID->"46b2c306-7043-4e2d-a063-3fcda70dd577"],
+Cell[32450, 919, 341, 7, 28, "Input",ExpressionUUID->"9e0b7f5e-7c01-46f8-b938-fe4f86c69375"],
+Cell[32794, 928, 185, 3, 34, "Text",ExpressionUUID->"3bd81ea7-018b-42f1-b42f-e814bd3afb8b"],
+Cell[32982, 933, 347, 8, 28, "Input",ExpressionUUID->"5290c58f-aecf-4d42-b350-a7e8bfa26714"],
+Cell[CellGroupData[{
+Cell[33354, 945, 235, 4, 28, "Input",ExpressionUUID->"7d40a35e-370c-4da4-9459-4508a6d03d88"],
+Cell[33592, 951, 152, 2, 32, "Output",ExpressionUUID->"0a6f5909-0b2d-46e2-85df-ca464f13b0a1"]
+}, Open  ]],
+Cell[33759, 956, 273, 5, 34, "Text",ExpressionUUID->"35e40cc9-37d4-4c97-9ae5-0a596670bea3"],
+Cell[34035, 963, 200, 3, 34, "Text",ExpressionUUID->"90cc6d23-89aa-4b0f-b834-c40f4b2c6fdd"]
 }, Open  ]]
+}, Open  ]],
+Cell[34262, 970, 159, 3, 67, "Section",ExpressionUUID->"443783d5-4afa-43b4-a059-aba1400c647a"]
 }, Open  ]]
 }
 ]
