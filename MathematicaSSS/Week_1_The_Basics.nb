@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     42974,       1118]
-NotebookOptionsPosition[     34437,        976]
-NotebookOutlinePosition[     35148,       1001]
-CellTagsIndexPosition[     35038,        995]
+NotebookDataLength[     49671,       1306]
+NotebookOptionsPosition[     39448,       1135]
+NotebookOutlinePosition[     40160,       1160]
+CellTagsIndexPosition[     40048,       1154]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -936,10 +936,11 @@ Cell[BoxData[
   RowBox[{"sumOfSquares", "[", 
    RowBox[{"int1_", ",", "int2_"}], "]"}], ":=", 
   RowBox[{
-   SuperscriptBox["int1", "2"], "+", 
-   SuperscriptBox["int2", "2"]}]}]], "Input",
- CellChangeTimes->{{3.7555052973369827`*^9, 3.755505321562546*^9}},
- CellLabel->"In[35]:=",ExpressionUUID->"5290c58f-aecf-4d42-b350-a7e8bfa26714"],
+   RowBox[{"int1", "^", "2"}], "+", 
+   RowBox[{"int2", "^", "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.7555052973369827`*^9, 3.755505321562546*^9}, {
+  3.7556797746252527`*^9, 3.7556797811187887`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"5290c58f-aecf-4d42-b350-a7e8bfa26714"],
 
 Cell[CellGroupData[{
 
@@ -954,28 +955,186 @@ Cell[BoxData["41"], "Output",
  CellLabel->"Out[36]=",ExpressionUUID->"0a6f5909-0b2d-46e2-85df-ca464f13b0a1"]
 }, Open  ]],
 
-Cell[TextData[StyleBox["Did you already show how to write the superscript? it \
-might be a bit confusibng if not",
- FontWeight->"Bold"]], "Text",
- CellChangeTimes->{{3.755507390602531*^9, 
-  3.7555074079054484`*^9}},ExpressionUUID->"35e40cc9-37d4-4c97-9ae5-\
-0a596670bea3"],
+Cell["\<\
+Once it is defined you can also use this function inside of other functions\
+\>", "Text",
+ CellChangeTimes->{{3.7556811257957525`*^9, 
+  3.755681147931398*^9}},ExpressionUUID->"583348c5-a13f-467f-a588-\
+7838457799d1"],
 
-Cell["For many things you will be using built-in functions. ", "Text",
- CellChangeTimes->{{3.7555058527614717`*^9, 
-  3.7555058719972587`*^9}},ExpressionUUID->"90cc6d23-89aa-4b0f-b834-\
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rootMeanSquare", "[", 
+   RowBox[{"int1_", ",", "int2_"}], "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{"sumOfSquares", "[", 
+    RowBox[{"int1", ",", "int2"}], "]"}], "^", "0.5"}]}]], "Input",
+ CellChangeTimes->{{3.7556811574094048`*^9, 3.7556812213104715`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"b7a75228-0e06-4a82-b7ea-58574773babe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rootMeanSquare", "[", 
+  RowBox[{"41", ",", "52"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7556812253991966`*^9, 3.755681233687482*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"24e137f3-d5a9-40af-b372-4a89d10d36b6"],
+
+Cell[BoxData["66.21933252457322`"], "Output",
+ CellChangeTimes->{3.755681234248311*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"ebeadad0-c112-4d9f-a7b4-50162305894c"]
+}, Open  ]],
+
+Cell["\<\
+For many things you will be using built-in functions, but you should keep in \
+mind how to define your own.\
+\>", "Text",
+ CellChangeTimes->{{3.7555058527614717`*^9, 3.7555058719972587`*^9}, {
+  3.7556812425311966`*^9, 
+  3.7556812539245615`*^9}},ExpressionUUID->"90cc6d23-89aa-4b0f-b834-\
 c40f4b2c6fdd"]
 }, Open  ]]
 }, Open  ]],
 
-Cell["B. Exercises", "Section",
- CellChangeTimes->{{3.755505064020681*^9, 
-  3.7555050672951803`*^9}},ExpressionUUID->"443783d5-4afa-43b4-a059-\
-aba1400c647a"]
+Cell[CellGroupData[{
+
+Cell["B. Topics", "Section",
+ CellChangeTimes->{{3.755505064020681*^9, 3.7555050672951803`*^9}, {
+  3.7556797398008337`*^9, 
+  3.755679740751161*^9}},ExpressionUUID->"443783d5-4afa-43b4-a059-\
+aba1400c647a"],
+
+Cell[CellGroupData[{
+
+Cell["Boolean Logic", "Subsection",
+ CellChangeTimes->{{3.7556797441370044`*^9, 
+  3.7556797458710775`*^9}},ExpressionUUID->"04e28e81-e219-490a-ab80-\
+1d547fc59333"],
+
+Cell["\<\
+You may remember the logic unit from last semester Formal Analysis. \
+Mathematica can help you with things like making truth tables.\
+\>", "Text",
+ CellChangeTimes->{{3.7556798851574893`*^9, 3.7556798877813673`*^9}, {
+  3.755680017429934*^9, 
+  3.7556800955502152`*^9}},ExpressionUUID->"85c3eadf-4f6e-4b37-9c3a-\
+2df44880c83c"],
+
+Cell[CellGroupData[{
+
+Cell["Notation", "Subsubsection",
+ CellChangeTimes->{{3.7556801003661757`*^9, 
+  3.7556801013497796`*^9}},ExpressionUUID->"85d8d21d-1ba1-4278-9103-\
+c96a059c6a6b"],
+
+Cell["\<\
+You can use the programming notation for the operators of && for AND, || for \
+OR, ...
+Or you can use the mathematical symbols by typing [esc]not[esc], for example, \
+you would get \[Not].
+Below is a table with the different notation and what to type.\
+\>", "Text",
+ CellChangeTimes->{{3.755680103758305*^9, 
+  3.755680224598874*^9}},ExpressionUUID->"35cd75a2-a433-46a1-ac0a-\
+3e7d407a3568"],
+
+Cell[TextData[{
+ Cell[BoxData[GridBox[{
+    {
+     RowBox[{"Logical", " ", "Operator"}], 
+     RowBox[{"programming", " "}], 
+     RowBox[{"x", " ", 
+      RowBox[{"in", " ", "[", "esc", "]"}], 
+      RowBox[{"x", "[", "esc", "]"}]}], 
+     RowBox[{"displayed", " ", "in", " ", "formula"}]},
+    {"AND", "&&", "and", "\[And]"},
+    {
+     RowBox[{
+      RowBox[{"(", "inclusive", ")"}], "OR"}], "||", "or", "\[Or]"},
+    {
+     RowBox[{
+      RowBox[{"(", "exclusive", ")"}], " ", "OR"}], "NA", "xor", "\[Xor]"},
+    {"NOT", "!", "not", "\[Not]"},
+    {
+     RowBox[{"NAND", " ", 
+      RowBox[{"(", "NOTAND", ")"}]}], 
+     RowBox[{"!", "&&"}], "nand", "\[Nand]"},
+    {"IMPLIES", "NA", 
+     RowBox[{"=", ">"}], "\[Implies]"}
+   },
+   GridBoxDividers->{
+    "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+     "RowsIndexed" -> {}}]],ExpressionUUID->
+  "676b0b7d-78c5-436e-adb9-e6fcfd69cb7e"],
+ "\nYou can now write things like \n(\[Not]p \[And] q) \[Xor] r "
+}], "Text",
+ CellChangeTimes->{{3.7556802578434443`*^9, 3.755680682483266*^9}, {
+  3.755684896392091*^9, 
+  3.7556849044806767`*^9}},ExpressionUUID->"5db1f52b-de91-457c-938f-\
+f2c3b779c220"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Evaluation & Simplification", "Subsubsection",
+ CellChangeTimes->{{3.7556848600610886`*^9, 
+  3.755684866701456*^9}},ExpressionUUID->"ab4ea0a8-b252-4630-a7da-\
+14f1170f995c"],
+
+Cell["After a boolean expression, you can ", "Text",
+ CellChangeTimes->{{3.7556849713001175`*^9, 
+  3.7556850079740305`*^9}},ExpressionUUID->"97ca2cc4-4f4c-4e64-86b8-\
+f4ee82b6e9eb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "p"}], "\[And]", "q"}], ")"}], "\[Xor]", "r"}], " ", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7556848687379255`*^9, 
+  3.755684966749305*^9}},ExpressionUUID->"7fb5125d-521f-4bca-ab85-\
+978517f49fa6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "p"}], "&&", "q"}], ")"}], "\[Xor]", 
+  RowBox[{"(", 
+   RowBox[{"r", "||", "p"}], ")"}]}]], "Output",
+ CellChangeTimes->{3.7556849210211105`*^9, 3.7556849522061996`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"82549d79-6cd9-4c30-88d8-57fc3e8babda"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Examples", "Subsubsection",
+ CellChangeTimes->{{3.755680568469901*^9, 3.755680570741784*^9}, 
+   3.755680686484296*^9},ExpressionUUID->"44cd82dd-7ff6-479e-b947-\
+492534bf698d"],
+
+Cell["Let\[CloseCurlyQuote]s look", "Text",
+ CellChangeTimes->{{3.755681268240512*^9, 
+  3.755681276300362*^9}},ExpressionUUID->"3c42fc77-6dd7-4f56-ab29-\
+634a29364be8"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["C. Exercises", "Section",
+ CellChangeTimes->{{3.7556797513965983`*^9, 3.7556797541398783`*^9}, {
+  3.755679806342908*^9, 
+  3.755679811286932*^9}},ExpressionUUID->"e7c6effa-4e95-44b0-aece-\
+7a293e28c331"]
 }, Open  ]]
 },
 WindowSize->{759, 637},
-WindowMargins->{{Automatic, 27}, {Automatic, 26}},
+WindowMargins->{{Automatic, -3}, {Automatic, 2}},
 FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
 StyleDefinitions->"Default.nb"
 ]
@@ -994,8 +1153,8 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"A. Mathematica Lab", 34739, 986},
- {"Data Types", 34888, 989}
+ {"A. Mathematica Lab", 39749, 1145},
+ {"Data Types", 39898, 1148}
  }
 *)
 (*NotebookFileOutline
@@ -1109,16 +1268,45 @@ Cell[32075, 908, 157, 3, 53, "Subsection",ExpressionUUID->"08245f26-a746-4370-9a
 Cell[32235, 913, 212, 4, 34, "Text",ExpressionUUID->"46b2c306-7043-4e2d-a063-3fcda70dd577"],
 Cell[32450, 919, 341, 7, 28, "Input",ExpressionUUID->"9e0b7f5e-7c01-46f8-b938-fe4f86c69375"],
 Cell[32794, 928, 185, 3, 34, "Text",ExpressionUUID->"3bd81ea7-018b-42f1-b42f-e814bd3afb8b"],
-Cell[32982, 933, 347, 8, 28, "Input",ExpressionUUID->"5290c58f-aecf-4d42-b350-a7e8bfa26714"],
+Cell[32982, 933, 397, 9, 28, "Input",ExpressionUUID->"5290c58f-aecf-4d42-b350-a7e8bfa26714"],
 Cell[CellGroupData[{
-Cell[33354, 945, 235, 4, 28, "Input",ExpressionUUID->"7d40a35e-370c-4da4-9459-4508a6d03d88"],
-Cell[33592, 951, 152, 2, 32, "Output",ExpressionUUID->"0a6f5909-0b2d-46e2-85df-ca464f13b0a1"]
+Cell[33404, 946, 235, 4, 28, "Input",ExpressionUUID->"7d40a35e-370c-4da4-9459-4508a6d03d88"],
+Cell[33642, 952, 152, 2, 32, "Output",ExpressionUUID->"0a6f5909-0b2d-46e2-85df-ca464f13b0a1"]
 }, Open  ]],
-Cell[33759, 956, 273, 5, 34, "Text",ExpressionUUID->"35e40cc9-37d4-4c97-9ae5-0a596670bea3"],
-Cell[34035, 963, 200, 3, 34, "Text",ExpressionUUID->"90cc6d23-89aa-4b0f-b834-c40f4b2c6fdd"]
+Cell[33809, 957, 227, 5, 34, "Text",ExpressionUUID->"583348c5-a13f-467f-a588-7838457799d1"],
+Cell[34039, 964, 372, 8, 28, "Input",ExpressionUUID->"b7a75228-0e06-4a82-b7ea-58574773babe"],
+Cell[CellGroupData[{
+Cell[34436, 976, 238, 4, 28, "Input",ExpressionUUID->"24e137f3-d5a9-40af-b372-4a89d10d36b6"],
+Cell[34677, 982, 165, 2, 32, "Output",ExpressionUUID->"ebeadad0-c112-4d9f-a7b4-50162305894c"]
+}, Open  ]],
+Cell[34857, 987, 314, 7, 56, "Text",ExpressionUUID->"90cc6d23-89aa-4b0f-b834-c40f4b2c6fdd"]
 }, Open  ]]
 }, Open  ]],
-Cell[34262, 970, 159, 3, 67, "Section",ExpressionUUID->"443783d5-4afa-43b4-a059-aba1400c647a"]
+Cell[CellGroupData[{
+Cell[35220, 1000, 207, 4, 67, "Section",ExpressionUUID->"443783d5-4afa-43b4-a059-aba1400c647a"],
+Cell[CellGroupData[{
+Cell[35452, 1008, 165, 3, 53, "Subsection",ExpressionUUID->"04e28e81-e219-490a-ab80-1d547fc59333"],
+Cell[35620, 1013, 337, 7, 56, "Text",ExpressionUUID->"85c3eadf-4f6e-4b37-9c3a-2df44880c83c"],
+Cell[CellGroupData[{
+Cell[35982, 1024, 163, 3, 44, "Subsubsection",ExpressionUUID->"85d8d21d-1ba1-4278-9103-c96a059c6a6b"],
+Cell[36148, 1029, 401, 9, 78, "Text",ExpressionUUID->"35cd75a2-a433-46a1-ac0a-3e7d407a3568"],
+Cell[36552, 1040, 1172, 33, 203, "Text",ExpressionUUID->"5db1f52b-de91-457c-938f-f2c3b779c220"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37761, 1078, 180, 3, 44, "Subsubsection",ExpressionUUID->"ab4ea0a8-b252-4630-a7da-14f1170f995c"],
+Cell[37944, 1083, 182, 3, 34, "Text",ExpressionUUID->"97ca2cc4-4f4c-4e64-86b8-f4ee82b6e9eb"],
+Cell[CellGroupData[{
+Cell[38151, 1090, 309, 9, 28, "Input",ExpressionUUID->"7fb5125d-521f-4bca-ab85-978517f49fa6"],
+Cell[38463, 1101, 317, 8, 32, "Output",ExpressionUUID->"82549d79-6cd9-4c30-88d8-57fc3e8babda"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38829, 1115, 182, 3, 44, "Subsubsection",ExpressionUUID->"44cd82dd-7ff6-479e-b947-492534bf698d"],
+Cell[39014, 1120, 169, 3, 34, "Text",ExpressionUUID->"3c42fc77-6dd7-4f56-ab29-634a29364be8"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[39222, 1128, 210, 4, 67, "Section",ExpressionUUID->"e7c6effa-4e95-44b0-aece-7a293e28c331"]
 }, Open  ]]
 }
 ]
