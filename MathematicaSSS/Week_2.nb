@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3422,        100]
-NotebookOptionsPosition[      2369,         71]
-NotebookOutlinePosition[      2904,         92]
-CellTagsIndexPosition[      2825,         87]
+NotebookDataLength[      4659,        135]
+NotebookOptionsPosition[      3218,         97]
+NotebookOutlinePosition[      3754,        118]
+CellTagsIndexPosition[      3674,        113]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,8 +34,8 @@ Cell["Table of Contents", "Section",
 b1cdb6a067b1"],
 
 Cell["\<\
-A. Lab- 
-B. Topic-
+A. Lab
+B. Topic- Complex Systems
 C. Exercises\
 \>", "Text",
  CellChangeTimes->{{3.755500605450055*^9, 3.755500613921137*^9}, {
@@ -43,10 +43,12 @@ C. Exercises\
   3.7555059476642375`*^9}, {3.7555059958609905`*^9, 3.7555060521167994`*^9}, {
   3.7557810411296935`*^9, 3.7557811073721094`*^9}, {3.7557863145409575`*^9, 
   3.755786380638592*^9}, {3.7557864495186186`*^9, 3.75578645408144*^9}, {
-  3.755787569069322*^9, 
-  3.755787573261431*^9}},ExpressionUUID->"028869ec-8244-4e57-acad-\
+  3.755787569069322*^9, 3.755787573261431*^9}, {3.756304362491791*^9, 
+  3.756304375269182*^9}},ExpressionUUID->"028869ec-8244-4e57-acad-\
 a0a9973341a0"]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["A. Lab", "Section",
  CellChangeTimes->{{3.755346848622404*^9, 3.7553468535829554`*^9}, {
@@ -55,11 +57,35 @@ Cell["A. Lab", "Section",
  CellTags->
   "A. Mathematica Lab",ExpressionUUID->"2f3e166b-c079-4158-9f94-c60f0a080c91"],
 
-Cell["B. Topic", "Section",
+Cell[CellGroupData[{
+
+Cell["Data Types", "Subsection",
+ CellChangeTimes->{{3.756174079056939*^9, 
+  3.756174081008856*^9}},ExpressionUUID->"1acf033b-eb21-4373-9c01-\
+e8eb8676eac4"],
+
+Cell[CellGroupData[{
+
+Cell["Associations", "Subsubsection",
+ CellChangeTimes->{{3.7561740831907253`*^9, 3.756174085104849*^9}, {
+  3.7563025809536495`*^9, 
+  3.756302588749147*^9}},ExpressionUUID->"1fb01b89-d54f-4b8d-98e5-\
+f01bc233ba62"],
+
+Cell["Associations are a data type consisting ", "Text",
+ CellChangeTimes->{{3.7563041636835947`*^9, 3.7563042056190896`*^9}, {
+  3.7563045084521303`*^9, 
+  3.756304521403408*^9}},ExpressionUUID->"a3928511-b863-412e-b0d7-\
+dc5f42d49854"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["B. Topic- Complex Systems", "Section",
  CellChangeTimes->{{3.755505064020681*^9, 3.7555050672951803`*^9}, {
    3.7556797398008337`*^9, 3.755679740751161*^9}, {3.7557864025268507`*^9, 
-   3.755786408598507*^9}, 
-   3.7557876418060384`*^9},ExpressionUUID->"eb174d66-196e-40bd-8045-\
+   3.755786408598507*^9}, 3.7557876418060384`*^9, {3.7561740896251283`*^9, 
+   3.7561740946364355`*^9}},ExpressionUUID->"eb174d66-196e-40bd-8045-\
 079de1700481"],
 
 Cell["C. Exercises", "Section",
@@ -70,7 +96,7 @@ c919b37cb11f"]
 }, Open  ]]
 },
 WindowSize->{759, 637},
-WindowMargins->{{10, Automatic}, {Automatic, 1}},
+WindowMargins->{{Automatic, -1}, {Automatic, 0}},
 FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
 StyleDefinitions->"Default.nb"
 ]
@@ -80,13 +106,13 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "A. Mathematica Lab"->{
-  Cell[1567, 50, 286, 5, 67, "Section",ExpressionUUID->"2f3e166b-c079-4158-9f94-c60f0a080c91",
+  Cell[1649, 52, 286, 5, 67, "Section",ExpressionUUID->"2f3e166b-c079-4158-9f94-c60f0a080c91",
    CellTags->"A. Mathematica Lab"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"A. Mathematica Lab", 2670, 81}
+ {"A. Mathematica Lab", 3519, 107}
  }
 *)
 (*NotebookFileOutline
@@ -95,12 +121,21 @@ Cell[CellGroupData[{
 Cell[580, 22, 245, 4, 67, "Chapter",ExpressionUUID->"69278c52-22b0-45d4-bf7c-87c9748a90b2"],
 Cell[CellGroupData[{
 Cell[850, 30, 164, 3, 67, "Section",ExpressionUUID->"58c3f945-0526-424a-a051-b1cdb6a067b1"],
-Cell[1017, 35, 535, 12, 78, "Text",ExpressionUUID->"028869ec-8244-4e57-acad-a0a9973341a0"]
+Cell[1017, 35, 595, 12, 78, "Text",ExpressionUUID->"028869ec-8244-4e57-acad-a0a9973341a0"]
 }, Open  ]],
-Cell[1567, 50, 286, 5, 67, "Section",ExpressionUUID->"2f3e166b-c079-4158-9f94-c60f0a080c91",
+Cell[CellGroupData[{
+Cell[1649, 52, 286, 5, 67, "Section",ExpressionUUID->"2f3e166b-c079-4158-9f94-c60f0a080c91",
  CellTags->"A. Mathematica Lab"],
-Cell[1856, 57, 284, 5, 53, "Section",ExpressionUUID->"eb174d66-196e-40bd-8045-079de1700481"],
-Cell[2143, 64, 210, 4, 53, "Section",ExpressionUUID->"5b334d07-4d15-4249-9e54-c919b37cb11f"]
+Cell[CellGroupData[{
+Cell[1960, 61, 158, 3, 53, "Subsection",ExpressionUUID->"1acf033b-eb21-4373-9c01-e8eb8676eac4"],
+Cell[CellGroupData[{
+Cell[2143, 68, 216, 4, 44, "Subsubsection",ExpressionUUID->"1fb01b89-d54f-4b8d-98e5-f01bc233ba62"],
+Cell[2362, 74, 237, 4, 34, "Text",ExpressionUUID->"a3928511-b863-412e-b0d7-dc5f42d49854"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[2638, 83, 351, 5, 67, "Section",ExpressionUUID->"eb174d66-196e-40bd-8045-079de1700481"],
+Cell[2992, 90, 210, 4, 53, "Section",ExpressionUUID->"5b334d07-4d15-4249-9e54-c919b37cb11f"]
 }, Open  ]]
 }
 ]
